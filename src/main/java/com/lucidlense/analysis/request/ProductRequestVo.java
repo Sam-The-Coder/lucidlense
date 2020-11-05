@@ -1,16 +1,14 @@
 package com.lucidlense.analysis.request;
 
 import io.swagger.annotations.ApiModelProperty;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 import org.springframework.stereotype.Component;
 
 import javax.xml.bind.annotation.XmlRootElement;
 import java.util.List;
 
 @Component
-@Getter
-@Setter
+@Data
 @XmlRootElement
 public class ProductRequestVo
 {
