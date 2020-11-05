@@ -26,7 +26,7 @@ public class Feature implements Serializable {
 	@Column(nullable = false)
 	private Long id;
 
-	@Column(name = "FeatureName", unique = true)
+	@Column(name = "FeatureName")
 	private String name;
 
 	@ManyToOne(fetch = FetchType.LAZY, optional = false)
