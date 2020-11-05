@@ -11,5 +11,14 @@ import java.util.List;
 @XmlRootElement
 public class ProductComparisionVo {
 
-    private List<ProductRequestVo> productsRequestVo;
+	private List<ProductRequestVo> requests;
+
+	public List<ProductRequestVo> getProductsRequestVo() {
+		return requests;
+	}
+
+	public void setProductsRequestVo(List<ProductRequestVo> requests) {
+		this.requests = requests;
+	}
+
 }

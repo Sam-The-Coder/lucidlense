@@ -25,11 +25,32 @@ public class Feature implements Serializable {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(nullable = false)
 	private Long id;
-	
-	@Column(name = "FeatureName", nullable = false, unique = true)
+
+	@Column(name = "FeatureName", unique = true)
 	private String name;
-	
-	 @ManyToOne(fetch = FetchType.LAZY, optional = false)
-	 @JoinColumn(name = "product", nullable = false)
-	 private ProductDetails product;
+
+	@ManyToOne(fetch = FetchType.LAZY, optional = false)
+	@JoinColumn(name = "product")
+	private ProductDetails product;
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public ProductDetails getProduct() {
+		return product;
+	}
+
+	public void setProduct(ProductDetails product) {
+		this.product = product;
+	}
+
+	@Override
+	public String toString() {
+		return "Feature [name=" + name + "]";
+	}
 }
