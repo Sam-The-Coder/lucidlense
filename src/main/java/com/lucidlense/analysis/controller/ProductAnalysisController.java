@@ -1,5 +1,6 @@
 package com.lucidlense.analysis.controller;
 
+import com.lucidlense.analysis.request.ProductComparisionVo;
 import com.lucidlense.analysis.request.ProductRequestVo;
 import com.lucidlense.analysis.response.ProductAnalysisReportVo;
 import io.swagger.annotations.Api;
@@ -67,7 +68,7 @@ public class ProductAnalysisController
     @PostMapping(value = "/productcomparision"
             , consumes = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE}
             , produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
-    public ResponseEntity<List<ProductAnalysisReportVo>> productcomparision(@RequestBody List<ProductRequestVo> productsRequestVo) {
+    public ResponseEntity<List<ProductAnalysisReportVo>> productcomparision(@RequestBody ProductComparisionVo productsRequestVo) {
         log.info("The service to generate the productanalysis report-" + productsRequestVo.toString());
         //call teh DB for now to get the products data
         return null;
